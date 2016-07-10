@@ -1,0 +1,63 @@
+<head>
+<link rel="stylesheet" type="text/css" href="letter.css">
+</head>
+
+<body>
+<div id="container" style="padding-top: 40px;">
+<h2>Getting Set Up</h2>
+<p>There are basically three steps to getting set up. Getting the three fonts that we want to use installed is the first thing you need to do. Then we're going to install R and a couple of R packages we need, as well as load up the Nylon Calculus fonts.</p>
+
+<h1>Installing the Nylon Calculus Fonts</h1>
+<p>Open the fonts folder in the same directory as these tutorials. Install each font. On both OSX and Windows you do this by double clicking on the font and the pressing the Install button on the font book that pops up. You can throw away the fonts folder once you've installed all three fonts.</p>
+
+<h1>Installing R</h1>
+<p>Go to: <a href="http://www.r-project.org/">http://www.r-project.org/</a></p>
+<p>Pick "download R" from the Getting Started text box.</p>
+<p>Choose whatever. CRAN is basically a bunch of servers that mirror R and R packages. Generally a server close to you will be faster but it really doesn't matter much.</p>
+<p>Choose your operating system from the links at the top.</p>
+<p>Choose "base"</p>
+<p>Choose "Download R 3.1.1"</p>
+<p>Run the downloaded file to install R.</p>
+<p><b>IF YOU ARE RUNNING WINDOWS:</b> You also need to go get rtools at this point: <a href="http://cran.r-project.org/bin/windows/Rtools/">http://cran.r-project.org/bin/windows/Rtools/</a>. Grab that and install.</p>
+
+<h1>Install R Packages</h1>
+<p>Open R. You will be looking at a command prompt. You can install packages from the menus, but we might as well get used to using the prompt.</p>
+
+<img src="http://www.austinclemens.com/blog/data/tutorials/rconsole.png" width=700></img>
+
+<p>At the prompt type:</p>
+
+<p class="code">install.packages('ggplot2')</p>
+
+<p>This may take a few seconds. Once your prompt shows again, you can verify that ggplot2 was installed by typing:</p>
+
+<p class="code">library(ggplot2)('ggplot2')</p>
+
+<p>You may get a warning, just ignore it (unless it says: 'there is no package called ggplot2', in which case let me know and we will trouble shoot). The library command is how R loads commands included in packages. <b>You need to issue this command every time you open R and want to use ggplot!</b></p>
+
+<p>In addition to ggplot, which is the main graphing package we'll be using, we also need the extrafont package, the devtools package, and the nyloncalc package I created:</p>
+
+<p class="code">
+install.packages('extrafont')<br>
+install.packages('devtools')<br>
+library(devtools)<br>
+install_github('nyloncalc','austinclemens')
+</p>
+
+<p>The last little bit of setup you need to do is to load the new fonts into R.</p>
+
+<p class="code">
+library(extrafont)<br>
+font_import()
+</p>
+
+<p>It may take quite a while to run the last command, especially if you have lots of fonts on your system. Once it finishes, you can verify that R has access to the Nylon Calculus fonts by typing fonts(). R will return a list of all fonts that are available to it:</p>
+
+<img src="http://www.austinclemens.com/blog/data/tutorials/rconsolefonts.png" width=700></img>
+
+<p>Somewhere on your list you should have Gulim, Daniel, and Chalk Line Outline. If you do, you're all set up.</p>
+
+<p><b><a href="http://www.austinclemens.com/blog/data/tutorials/tutorial2.html">Next: Short Intro to R</a></b></p>
+
+
+</div>
