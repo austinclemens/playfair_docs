@@ -4,60 +4,94 @@
 
 <body>
 <div id="container" style="padding-top: 40px;">
-<h2>Getting Set Up</h2>
-<p>There are basically three steps to getting set up. Getting the three fonts that we want to use installed is the first thing you need to do. Then we're going to install R and a couple of R packages we need, as well as load up the Nylon Calculus fonts.</p>
+<h2>Loading Data</h2>
+<p><b>Very important disclaimer</b>: Playfair is currently only compatible with Chrome.</p>
+<p>If you just want to play around with Playfair and see what it can do, you can use my hosted version here: <a href="http://austinclemens.com/Playfair/playfair.html">austinclemens.com/Playfair/playfair.html</a> </p>
 
-<h1>Installing the Nylon Calculus Fonts</h1>
-<p>Open the fonts folder in the same directory as these tutorials. Install each font. On both OSX and Windows you do this by double clicking on the font and the pressing the Install button on the font book that pops up. You can throw away the fonts folder once you've installed all three fonts.</p>
+<h1>Loading a new data set</h1>
+<p>When you load Playfair, you'll be looking at the data tab of the interface. Paste your data into this box. Data can be comma or tab delimited. You can paste data directly from Excel into Playfair.</p>
 
-<h1>Installing R</h1>
-<p>Go to: <a href="http://www.r-project.org/">http://www.r-project.org/</a></p>
-<p>Pick "download R" from the Getting Started text box.</p>
-<p>Choose whatever. CRAN is basically a bunch of servers that mirror R and R packages. Generally a server close to you will be faster but it really doesn't matter much.</p>
-<p>Choose your operating system from the links at the top.</p>
-<p>Choose "base"</p>
-<p>Choose "Download R 3.1.1"</p>
-<p>Run the downloaded file to install R.</p>
-<p><b>IF YOU ARE RUNNING WINDOWS:</b> You also need to go get rtools at this point: <a href="http://cran.r-project.org/bin/windows/Rtools/">http://cran.r-project.org/bin/windows/Rtools/</a>. Grab that and install.</p>
+<p>After pasting your data in, click anywhere outside the data box and Playfair will parse the data. A message will be displayed below the data box summarizing your data. <b>You should look carefully at this message</b> as it may explain problems you are having in graphing.
 
-<h1>Install R Packages</h1>
-<p>Open R. You will be looking at a command prompt. You can install packages from the menus, but we might as well get used to using the prompt.</p>
+<img src="assets/dataload.png" width=700></img>
 
-<img src="http://www.austinclemens.com/blog/data/tutorials/rconsole.png" width=700></img>
+<p>For example, in the screenshot above, the 'DATE' variable is being incorrectly interpreted as a numeric variable, where it really should be a date. We can force Playfair to parse this variable as a date by clicking the dropdown and selecting the correct data type. I'm using some US unemployment rate data from FRED in this example. If you want to follow along, copy it from below and paste into Playfair:</p>
 
-<p>At the prompt type:</p>
+<div class='scroller'>
+<div class='code'>DATE	UNRATE</div>
+<div class='code'>1948	3.8</div>
+<div class='code'>1949	6.1</div>
+<div class='code'>1950	5.2</div>
+<div class='code'>1951	3.3</div>
+<div class='code'>1952	3</div>
+<div class='code'>1953	2.9</div>
+<div class='code'>1954	5.6</div>
+<div class='code'>1955	4.4</div>
+<div class='code'>1956	4.1</div>
+<div class='code'>1957	4.3</div>
+<div class='code'>1958	6.8</div>
+<div class='code'>1959	5.5</div>
+<div class='code'>1960	5.5</div>
+<div class='code'>1961	6.7</div>
+<div class='code'>1962	5.6</div>
+<div class='code'>1963	5.6</div>
+<div class='code'>1964	5.2</div>
+<div class='code'>1965	4.5</div>
+<div class='code'>1966	3.8</div>
+<div class='code'>1967	3.8</div>
+<div class='code'>1968	3.6</div>
+<div class='code'>1969	3.5</div>
+<div class='code'>1970	5</div>
+<div class='code'>1971	6</div>
+<div class='code'>1972	5.6</div>
+<div class='code'>1973	4.9</div>
+<div class='code'>1974	5.6</div>
+<div class='code'>1975	8.5</div>
+<div class='code'>1976	7.7</div>
+<div class='code'>1977	7.1</div>
+<div class='code'>1978	6.1</div>
+<div class='code'>1979	5.9</div>
+<div class='code'>1980	7.2</div>
+<div class='code'>1981	7.6</div>
+<div class='code'>1982	9.7</div>
+<div class='code'>1983	9.6</div>
+<div class='code'>1984	7.5</div>
+<div class='code'>1985	7.2</div>
+<div class='code'>1986	7</div>
+<div class='code'>1987	6.2</div>
+<div class='code'>1988	5.5</div>
+<div class='code'>1989	5.3</div>
+<div class='code'>1990	5.6</div>
+<div class='code'>1991	6.9</div>
+<div class='code'>1992	7.5</div>
+<div class='code'>1993	6.9</div>
+<div class='code'>1994	6.1</div>
+<div class='code'>1995	5.6</div>
+<div class='code'>1996	5.4</div>
+<div class='code'>1997	4.9</div>
+<div class='code'>1998	4.5</div>
+<div class='code'>1999	4.2</div>
+<div class='code'>2000	4</div>
+<div class='code'>2001	4.7</div>
+<div class='code'>2002	5.8</div>
+<div class='code'>2003	6</div>
+<div class='code'>2004	5.5</div>
+<div class='code'>2005	5.1</div>
+<div class='code'>2006	4.6</div>
+<div class='code'>2007	4.6</div>
+<div class='code'>2008	5.8</div>
+<div class='code'>2009	9.3</div>
+<div class='code'>2010	9.6</div>
+<div class='code'>2011	8.9</div>
+<div class='code'>2012	8.1</div>
+<div class='code'>2013	7.4</div>
+<div class='code'>2014	6.2</div>
+<div class='code'>2015	5.3</div>
+</div>
 
-<p class="code">install.packages('ggplot2')</p>
+<p>You may also get a yellow box. This usually means that some of your data rows are missing data. This is not a problem per se, and shouldn't affect your graphs, but if you notice odd behavior in Playfair you may want to remove these rows.</p>
 
-<p>This may take a few seconds. Once your prompt shows again, you can verify that ggplot2 was installed by typing:</p>
-
-<p class="code">library(ggplot2)('ggplot2')</p>
-
-<p>You may get a warning, just ignore it (unless it says: 'there is no package called ggplot2', in which case let me know and we will trouble shoot). The library command is how R loads commands included in packages. <b>You need to issue this command every time you open R and want to use ggplot!</b></p>
-
-<p>In addition to ggplot, which is the main graphing package we'll be using, we also need the extrafont package, the devtools package, and the nyloncalc package I created:</p>
-
-<p class="code">
-install.packages('extrafont')<br>
-install.packages('devtools')<br>
-library(devtools)<br>
-install_github('nyloncalc','austinclemens')
-</p>
-
-<p>The last little bit of setup you need to do is to load the new fonts into R.</p>
-
-<p class="code">
-library(extrafont)<br>
-font_import()
-</p>
-
-<p>It may take quite a while to run the last command, especially if you have lots of fonts on your system. Once it finishes, you can verify that R has access to the Nylon Calculus fonts by typing fonts(). R will return a list of all fonts that are available to it:</p>
-
-<img src="http://www.austinclemens.com/blog/data/tutorials/rconsolefonts.png" width=700></img>
-
-<p>Somewhere on your list you should have Gulim, Daniel, and Chalk Line Outline. If you do, you're all set up.</p>
-
-<p><b><a href="http://www.austinclemens.com/blog/data/tutorials/tutorial2.html">Next: Short Intro to R</a></b></p>
+<p><b><a href="tutorial2.html">Next: Make a simple graph</a></b></p>
 
 
 </div>
