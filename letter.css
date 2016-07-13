@@ -40,15 +40,21 @@ p {
 img {padding:15 0 15 0;}
 
 a:link {
-color: #ff6600;
+color: #67c2a5;
 font-weight: bold;
 }
 
 /* visited link */
 a:visited {
-color: #ff6600;
+color: #67c2a5;
 font-weight: bold;
 }
+
+.tab {color:#205946;font-weight:400;border-bottom:3px solid #67c2a5;white-space:nowrap;}
+
+.subtab {color:white;background:#33836A;padding:1 5 1 5;white-space:nowrap;}
+
+.button{border:1px solid #bbb;border-radius:2px;padding:1 5 1 5;white-space:nowrap}
 
 .scroller {
     height: 350px;
