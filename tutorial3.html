@@ -8,18 +8,23 @@
 <p><b>Very important disclaimer</b>: Playfair is currently only compatible with Chrome.</p>
 <p>Again, the hosted version of Playfair is available here: <a href="http://austinclemens.com/Playfair/playfair.html">austinclemens.com/Playfair/playfair.html</a> </p>
 
-<p>Let's continue working with the chart in the previous tutorial.</p>
+<p>Let's continue working with the chart in the previous tutorial. First, I want to change the key a little bit. We really don't need a key entry for the unemployment line, since it's the only line on the graph. So go to the <span class='tab'>Legend</span> tab. In the Preview box, click the x on the line element to delete it, and move the shade element up into the top box by dragging it, so your Preview looks like this:</p>
 
-<p>After pasting your data in, click anywhere outside the data box and Playfair will parse the data. A message will be displayed below the data box summarizing your data. <b>You should look carefully at this message</b> as it may explain problems you are having in graphing.
+<img src="assets/legend.png" width=400></img>
 
-<img src="assets/dataload.png" width=700></img>
+<p>I also want to have a label for the recession shading so I'm going to go back to the <span class='subtab'>Shading</span> subtab and enter 'US Recessions' into the legend label box. Now I redraw the graph and then I can drag the floating key wherever I'd like it to be on the chart, so now I have this:</p>
 
-<p>For example, in the screenshot above, the 'DATE' variable is being incorrectly interpreted as a numeric variable, where it really should be a date. We can force Playfair to parse this variable as a date by clicking the dropdown and selecting the correct data type. I'm using some US unemployment rate data from FRED in this example. If you want to follow along, copy it from below and paste into Playfair:</p>
+<img src="assets/legend2.png" width=700></img>
 
-<p>You may also get a yellow box. This usually means that some of your data rows are missing data. This is not a problem per se, and shouldn't affect your graphs, but if you notice odd behavior in Playfair you may want to remove these rows.</p>
+<p>The last thing I want to do is change the color of the line and add an annotation to the graph. Changing the line color is easy. Just right-click on the line (you'll know you've selected the line because a shadow will appear behind it) and pick the color you want.</p> 
 
-<p><b><a href="tutorial2.html">Next: More complicated graphs</a></b></p>
-<p><b><a href="tutorial2.html">Previous: Make a simple graph</a></b></p>
+<img src="assets/context.png" align='right' width=200></img>
+<p>To add an annotation that labels the Great Recession, right-click anywhere inside the Great Recession shading block and choose Start Path. Then click again in an empty area to end the path. Next, right-click and select Add Text. This creates a text area that can be edited by double-clicking on it and typing as you normally would. The box to the left of the plotting area will show you the commands available to you for editing text. The last thing I'm going to do is double-click a y-axis label and add a percentage sign. This is the finished graph:</p>
+
+<img src="assets/legend3.png" width=700></img>
+
+<p><b><a href="tutorial4.html">Next: More complicated graphs</a></b></p>
+<p><b><a href="tutorial3.html">Previous: Make a simple graph</a></b></p>
 
 
 </div>
