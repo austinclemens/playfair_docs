@@ -8,16 +8,26 @@
 <p><b>Very important disclaimer</b>: Playfair is currently only compatible with Chrome.</p>
 <p>Again, the hosted version of Playfair is available here: <a href="http://austinclemens.com/Playfair/playfair.html">austinclemens.com/Playfair/playfair.html</a> </p>
 
-<h1>Loading a new data set</h1>
-<p>When you load Playfair, you'll be looking at the data tab of the interface. Paste your data into this box. Data can be comma or tab delimited. You can paste data directly from Excel into Playfair.</p>
+<p>If you really want to extend what you can do with Playfair, you can use the <span class='tab'>Settings</span> tab to adjust the layout and look of your graph. You can really stretch Playfair's limits and do some unusual things here. The graph below, which mimics a graph from Edward Tufte's The Visual Display of Quantitative Information, was created using a number of custom settings.</p>
 
-<p>After pasting your data in, click anywhere outside the data box and Playfair will parse the data. A message will be displayed below the data box summarizing your data. <b>You should look carefully at this message</b> as it may explain problems you are having in graphing.
+<img src="assets/slopechart.png" width=500></img>
 
-<img src="assets/dataload.png" width=700></img>
+<p>For example, Playfair has no built in function for removing ticks and tick labels, but you can adjust these parameters in the <span class='subtab'>Grids</span> subtab as shown below:</p>
 
-<p>For example, in the screenshot above, the 'DATE' variable is being incorrectly interpreted as a numeric variable, where it really should be a date. We can force Playfair to parse this variable as a date by clicking the dropdown and selecting the correct data type. I'm using some US unemployment rate data from FRED in this example. If you want to follow along, copy it from below and paste into Playfair:</p>
+<img src="assets/slopechartsettings2.png" width=200></img>
 
-<p>You may also get a yellow box. This usually means that some of your data rows are missing data. This is not a problem per se, and shouldn't affect your graphs, but if you notice odd behavior in Playfair you may want to remove these rows.</p>
+<p>Some adjustment is also needed to give the graph a large gutter on both the left and right side for text. These parameters can be adjusted in the <span class='subtab'>Graph Area</span> subtab. The background color the chart can be edited here too. I've adjusted it to white here (using the hex color code).</p>
+
+<img src="assets/slopechartsettings1.png" width=650></img>
+
+<p>Here's another graph that was created with extensive use of the <span class='tab'>Settings</span> tab:</p>
+
+<img src="assets/bubbles.png" width=700></img>
+
+<p>As with the previous graph, I gave this one a large right margin to accomodate the lengthy annotation I wanted to add. I also adjusted the settings for the point data element to have a thinner border and a larger maximum size, as shown in the screenshot:</p>
+
+<img src="assets/marginsettings.png" width=430></img>
+<img src="assets/pointmodsettings.png" width=650></img>
 
 <p><b><a href="tutorial4.html">Previous: A more complicated graph</a></b></p>
 
